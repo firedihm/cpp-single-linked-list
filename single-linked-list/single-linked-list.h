@@ -104,7 +104,7 @@ public:
     }
     
     void Clear() noexcept {
-        while(head_.next_node) {
+        while (head_.next_node) {
             Node* node_after_next = head_.next_node->next_node;
             delete head_.next_node;
             head_.next_node = node_after_next;
@@ -129,7 +129,7 @@ public:
 private:
     template <typename Container>
     void BuildList(Container& c) {
-        if(this == reinterpret_cast<const SingleLinkedList*>(&c)) {
+        if (this == reinterpret_cast<const SingleLinkedList*>(&c)) {
             return;
         }
         
@@ -146,7 +146,7 @@ private:
     
     Node* FindListEnd() const {
         Node* curr_node = head_.next_node;
-        while(curr_node) {
+        while (curr_node) {
             curr_node = curr_node->next_node;
         }
         return curr_node;
