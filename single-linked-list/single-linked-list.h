@@ -1,4 +1,3 @@
-#include <cassert>
 #include <cstddef>
 #include <iterator>
 #include <string>
