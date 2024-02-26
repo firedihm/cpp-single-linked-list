@@ -138,8 +138,8 @@ private:
             curr_node->next_node = new Node(*it, nullptr);
             curr_node = curr_node->next_node;
         }
-        
         temp.size_ = std::distance(c.begin(), c.end());
+        
         swap(temp);
     }
     
