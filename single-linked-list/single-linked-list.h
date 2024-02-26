@@ -1,7 +1,7 @@
+#include <algorithm>
 #include <cstddef>
 #include <iterator>
 #include <string>
-#include <utility>
 
 template <typename Type>
 class SingleLinkedList {
