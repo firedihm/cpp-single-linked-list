@@ -120,11 +120,11 @@ public:
     [[nodiscard]] Iterator end() noexcept { return Iterator(FindListEnd()); }
     [[nodiscard]] ConstIterator begin() const noexcept { return ConstIterator(head_.next_node); }
     [[nodiscard]] ConstIterator end() const noexcept { return ConstIterator(FindListEnd()); }
-    [[nodiscard]] ConstIterator cbegin() const noexcept { return ConstIterator(head_.next_node); }
-    [[nodiscard]] ConstIterator cend() const noexcept { return ConstIterator(FindListEnd()); }
+    [[nodiscard]] ConstIterator cbegin() const noexcept { return begin(); }
+    [[nodiscard]] ConstIterator cend() const noexcept { return end(); }
     [[nodiscard]] Iterator before_begin() noexcept { return Iterator(&head_); }
     [[nodiscard]] ConstIterator before_begin() const noexcept { return ConstIterator(&const_cast<Node&>(head_)); }
-    [[nodiscard]] ConstIterator cbefore_begin() const noexcept { return ConstIterator(&const_cast<Node&>(head_)); }
+    [[nodiscard]] ConstIterator cbefore_begin() const noexcept { return before_begin(); }
 private:
     template <typename Container>
     void BuildList(Container& c) {
