@@ -1,6 +1,6 @@
-#include <cassert>
-
 #include "single-linked-list.h"
+
+#include <cassert>
 
 // Эта функция проверяет работу класса SingleLinkedList
 void Test() {
